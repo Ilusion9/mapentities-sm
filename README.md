@@ -119,3 +119,86 @@ sm_dump_entitylump <file> - Dumps all map entities data in a file.
 	}
 }
 ```
+
+## Modify entities
+- Both key and value are required when you search for a keyvalue.
+- Use output: 1 if the keyvalue is an output.
+- Both key and value are required when you add a keyvalue.
+- Only key is required when you delete a keyvalue
+- Both key and value are required when you modify a keyvalue.
+- You can specify an old_value to modify keyvalues only with that value.
+- You can specify the value_type: add_flags to add flags, substract_flags to substract flags, min to set a minimum value, max to set a maximum value.
+
+```
+"Modify Entities"
+{
+	"entity"
+	{
+		"match"
+		{
+			"keyvalue"
+			{
+				"key"		"classname"
+				"value"		"trigger_hurt"
+			}
+		}
+		
+		"modify"
+		{
+			"keyvalue"
+			{
+				"key"			"damage"
+				"value"			"5"
+				"value_type"		"min" // set a minimum damage value for all trigger_hurt entities
+			}
+		}
+	}
+	
+	"entity"
+	{
+		"match"
+		{
+			"keyvalue"
+			{
+				"key"		"hammerid"
+				"value"		"34301"
+			}
+		}
+		
+		"delete"
+		{
+			"keyvalue"
+			{
+				"key"			"OnUseLocked" // delete all OnUseLocked outputs from this entity
+			}
+		}
+		
+		"modify"
+		{
+			"keyvalue"
+			{
+				"key"			"targetname"
+				"value"			"test"
+			}
+			
+			"keyvalue"
+			{
+				"key"			"OnPressed"
+				"old_value"		"track2:Reverse::0:1"
+				"value"			"track2:SetSpeedReal:300:0:-1"
+				"output"		"1"
+			}
+		}
+		
+		"add"
+		{
+			"keyvalue"
+			{
+				"key"			"OnPressed"
+				"value"			"track2:SetSpeedReal:100:5:-1"
+				"output"		"1"
+			}
+		}
+	}
+}
+```
