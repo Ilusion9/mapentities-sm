@@ -2,7 +2,8 @@
 Manage map entites using EntityLump. Create a config file in configs/mapentities with the name of the map to manage map entities.
 
 # Dependencies
-Sourcemod 1.12 (6922 version) or a higher one.
+- Sourcemod 1.12 (6922 version) or a higher one.
+- Clearhandle (include file) - https://github.com/Ilusion9/clearhandle-inc-sm
 
 # Commands
 ```
