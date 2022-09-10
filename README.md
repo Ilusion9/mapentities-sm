@@ -1,6 +1,9 @@
 # Description
 Manage map entites using EntityLump.
 
+# Dependencies
+Sourcemod 1.12 (6922 version) or a higher one.
+
 # Commands
 ```
 sm_dump_entitylump <file> - Dumps all map entities data in a file.
@@ -9,7 +12,7 @@ sm_dump_entitylump <file> - Dumps all map entities data in a file.
 # Examples
 ## Add entities
 - Both key and value are required when you add a keyvalue.
-- Use "output" "1" if the keyvalue is an output.
+- Use output: 1 if the keyvalue is an output.
 
 ```
 "Add Entities"
@@ -67,7 +70,7 @@ sm_dump_entitylump <file> - Dumps all map entities data in a file.
 
 ## Delete entities
 - Both key and value are required when you search for a keyvalue.
-- Use "output" "1" if the keyvalue is an output.
+- Use output: 1 if the keyvalue is an output.
 
 ```
 "Delete Entities"
