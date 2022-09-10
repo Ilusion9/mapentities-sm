@@ -126,8 +126,8 @@ sm_dump_entitylump <file> - Dumps all map entities data in a file.
 - Both key and value are required when you add a keyvalue.
 - Only key is required when you delete a keyvalue
 - Both key and value are required when you modify a keyvalue.
-- You can specify an old_value to modify keyvalues only with that value.
-- You can specify the value_type: add_flags to add flags, substract_flags to substract flags, min to set a minimum value, max to set a maximum value.
+- When you modify a keyvalue, you can specify an old_value to change keyvalues only with that value.
+- When you modify a keyvalue, you can specify a value_type: add_flags to add flags, substract_flags to substract flags, min to set a minimum value, max to set a maximum value.
 
 ```
 "Modify Entities"
